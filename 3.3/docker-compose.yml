@@ -36,7 +36,7 @@ services:
             - POSTGRES_PORT=5432
             - POSTGRES_HOST=cmdbuild_db
             - POSTGRES_DB=cmdbuild_3
-            - CMDBUILD_DUMP=demo
+            - CMDBUILD_DUMP=empty
             - JAVA_OPTS=-Xmx4000m -Xms2000m
         mem_limit: 4000m
         mem_reservation: 2000m

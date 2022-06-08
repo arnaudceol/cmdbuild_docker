@@ -1,6 +1,6 @@
 version: "2.4"
 volumes:
-    cmdbuild-db:
+    cmdbuild-db2:
     cmdbuild-tomcat:
 
 services:
@@ -8,7 +8,7 @@ services:
         image: itmicus/cmdbuild:db-3.0
         container_name: cmdbuild_db
         volumes:
-            - cmdbuild-db:/var/lib/postgresql
+            - cmdbuild-db2:/var/lib/postgresql
         ports:
             - 5432:5432
         environment:
@@ -36,7 +36,7 @@ services:
             - POSTGRES_PORT=5432
             - POSTGRES_HOST=cmdbuild_db
             - POSTGRES_DB=cmdbuild_r2u2
-            - CMDBUILD_DUMP=ready2use_demo.dump.xz
+            - CMDBUILD_DUMP=ready2use_empty.dump.xz
             - JAVA_OPTS=-Xmx4000m -Xms2000m
         mem_limit: 4000m
         mem_reservation: 2000m
