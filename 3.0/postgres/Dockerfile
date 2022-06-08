@@ -9,7 +9,7 @@ ENV POSTGRES_PASS postgres
 RUN apt-get update \
       && apt-get install -y --no-install-recommends \
       postgresql-10-postgis-$POSTGIS_MAJOR \
-      postgresql-10-postgis-scripts \
+      postgresql-10-postgis-$POSTGIS_MAJOR-scripts \
       && rm -rf /var/lib/apt/lists/*
 
 # cleanup
